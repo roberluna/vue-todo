@@ -4,11 +4,11 @@
 
         <ul>
             <li v-for="todo in todos" :key="todo.id">
-                {{todo.name}} | {{todo.estatus}}
+                {{todo.name}} -  {{todo.estatus}} - <router-link :to="{ name: 'TodoEdit', params: { id: todo.id }}">Editar</router-link>
             </li>
         </ul>
 
-        {{todos}}
+        
     </div>
 </template>
 
